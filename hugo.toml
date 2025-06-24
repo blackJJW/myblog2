@@ -6,3 +6,47 @@ languageCode = "en-us"
 
 disqusShortname = ""
 googleAnalytics = "G-65FHK1SBF9"
+
+[module]
+  [module.hugoVersion]
+    min = '0.126.3'
+
+[mediaTypes]
+  [mediaTypes.'text/javascript']
+    suffixes = ['js']
+
+[outputFormats]
+  [outputFormats.print]
+    name= 'print'
+    baseName = 'index.print'
+    isHTML = true
+    mediaType = 'text/html'
+    permalinkable = false
+    noUgly = true
+
+  [outputFormats.source]
+    name= 'source'
+    baseName = 'index.source'
+    isHTML = false
+    mediaType = 'text/markdown'
+    permalinkable = false
+    noUgly = true
+
+[params.relearn.dependencies]
+  [params.relearn.dependencies.math]
+    name = 'Math'
+  [params.relearn.dependencies.mermaid]
+    name = 'Mermaid'
+  [params.relearn.dependencies.openapi]
+    name = 'OpenApi'
+
+[params.relearn]
+  collapsibleMenu = true
+
+[params]
+  alwaysopen = false
+  showVisitedLinks = false
+  collapsibleMenu = true
+  disableSearch = true
+  disableSearchIndex = true
+  disableSearchPage = true
