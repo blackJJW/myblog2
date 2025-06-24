@@ -1,6 +1,10 @@
 +++
-title = ""
+title = "Home"
 type = "home"
 +++
 
-This is your new home page.
+## Welcome to My Technical Blog
+
+### Engineering Logs
+- [Projects](/projects)
+
