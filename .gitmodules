@@ -1,0 +1,6 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/blackJJW/blackJJW.github.io.git
+[submodule "themes/hugo-theme-relearn"]
+	path = themes/hugo-theme-relearn
+	url = https://github.com/McShelby/hugo-theme-relearn.git

@@ -1,0 +1,8 @@
+theme = 'hugo-theme-relearn'
+
+baseurl = "https://blackjjw.github.io/"
+title = "Black_JJW's Blog"
+languageCode = "en-us"
+
+disqusShortname = ""
+googleAnalytics = "G-65FHK1SBF9"
