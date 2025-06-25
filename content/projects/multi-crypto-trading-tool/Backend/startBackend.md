@@ -43,4 +43,4 @@ tags = ["python", "uv", "FastAPI"]
 
 When running the application with `uv run main.py`, you can see the startup and shutdown messages handled by the `lifespan()` function:
 
-![FastAPI Lifespan Output](/images/projects/mcttoo/fastapi_lifespan_output.png)
+![FastAPI Lifespan Output](/images/projects/mcttool/fastapi_lifespan_output.png)
