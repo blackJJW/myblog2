@@ -38,3 +38,9 @@ tags = ["python", "uv", "FastAPI"]
         - Test stability (isolated setup/teardown)
         - Clean resource management (DB, queues, sockets)
     - `@asynccontextmanager`: This decorator from the `contextlib` module allows defining an asynchronous context manager using `async def`. It enables setup and cleanup logic around the `yield` statement, and is used here to control the FastAPI application's lifespan events (startup and shutdown).
+
+### 2.1 Execution Output
+
+When running the application with `uv run main.py`, you can see the startup and shutdown messages handled by the `lifespan()` function:
+
+![FastAPI Lifespan Output](/images/projects/mcttoo/fastapi_lifespan_output.png)
