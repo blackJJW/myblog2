@@ -30,16 +30,22 @@ IF LogConfigurator not configured:
 ## 2. How I Configured the Logger
 - To satisfy the logging requirements mentioned above, I built a singleton `LogConfigurator` using `Loguru`, which includes:
 
-### 2.1. Singleton Pattern
-- I wanted to ensure that the logger is configured only once, even if multiple modules try to initialize it. The class uses a standard `__new__` pattern to maintain a single instance.
+### 2.1 Installing loguru
+- First, install `Loguru` using `uv`:
+    ```bash
+    uv install loguru
+    ```
+
+### 2.2 Singleton Pattern
+- I wanted to ensure that the logger is configured only **once**, even if multiple modules try to initialize it. The class uses a standard `__new__` pattern to maintain a single instance.
     ```python
-    def _new__(cls, *args, **kwargs):
+    def __new__(cls, *args, **kwargs):
         if cls._instance is None:
             cls._instance = super().__new__(cls)
         return cls._instance
     ```
 
-### 2.2 Log File Management
+### 2.3 Log File Management
 - Each log file is automatically named using the current date and saved under `/backend/logs`. I use Loguru's built-in **rotation** and **retention** to:
     - Create a new file every day at midnight
     - Retain logs only for 7 days
@@ -55,7 +61,7 @@ IF LogConfigurator not configured:
     )
     ```
 
-### 2.3 Console Output with Colors
+### 2.4 Console Output with Colors
 - Loguru's `colorize=True` option lets me apply colors to console logs, improving readability during development.
     ```python
     logger.add(
@@ -66,7 +72,7 @@ IF LogConfigurator not configured:
     )
     ```
 
-### 2.4 Intercepting FastAPI/Uvicorn Logs
+### 2.5 Intercepting FastAPI/Uvicorn Logs
 - By default, FastAPI and Uvicorn use the built-in logging module. To unify all logs under Loguru, I wrote a custom `InterceptHandler` which:
     - Captures standard logging logs
     - Redirects them to Loguru with correct context (function name, line number, etc.)
@@ -85,7 +91,7 @@ IF LogConfigurator not configured:
     ]
     ```
 
-### 2.5 Execution Outputs
+### 2.6 Execution Outputs
 ![log file Output](/images/projects/mcttool/3-1.png)
 ![log file content Output](/images/projects/mcttool/3-2.png)
 
