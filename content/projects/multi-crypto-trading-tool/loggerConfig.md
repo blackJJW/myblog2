@@ -33,7 +33,7 @@ IF LogConfigurator not configured:
 ### 2.1 Installing loguru
 - First, install `Loguru` using `uv`:
     ```bash
-    uv install loguru
+    uv pip install loguru
     ```
 
 ### 2.2 Singleton Pattern
