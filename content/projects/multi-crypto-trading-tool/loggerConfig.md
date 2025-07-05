@@ -4,12 +4,15 @@ type = "Projects"
 tags = ["python", "uv", "loguru", "logger"]
 +++
 
-For operating this project reliably, I need a robust logging system. So I decided the `Loguru` library for its simplicity and powerful features. The configuration was customized to meet the following requirements: 
+For operating this project reliably, I need a robust logging system. So I decided the `Loguru` library for its simplicity and powerful features. The configuration was customized to meet the following requirements:
+
 1. Custom Log Formatting
     Example:
+
     ```text
     2025-06-26 23:09:24 | INFO     | main                :lifespan       :16   - Starting up the application...
     ```
+
 2. Persistent Log Files
     - Save logs using filenames that include the current date.
     - Retain logs for 7 days only.
@@ -17,6 +20,7 @@ For operating this project reliably, I need a robust logging system. So I decide
     - Ensure logs from `FastAPI`, `Uvicorn`, and `Starlette` are captured uniformly
 
 ## 1. Pseudocode Summary
+
 ```text
 IF LogConfigurator not configured:
     - Create log directory
@@ -28,16 +32,21 @@ IF LogConfigurator not configured:
 ```
 
 ## 2. How I Configured the Logger
+
 - To satisfy the logging requirements mentioned above, I built a singleton `LogConfigurator` using `Loguru`, which includes:
 
 ### 2.1 Installing loguru
+
 - First, install `Loguru` using `uv`:
+
     ```bash
     uv pip install loguru
     ```
 
 ### 2.2 Singleton Pattern
+
 - I wanted to ensure that the logger is configured only **once**, even if multiple modules try to initialize it. The class uses a standard `__new__` pattern to maintain a single instance.
+
     ```python
     def __new__(cls, *args, **kwargs):
         if cls._instance is None:
@@ -46,10 +55,12 @@ IF LogConfigurator not configured:
     ```
 
 ### 2.3 Log File Management
+
 - Each log file is automatically named using the current date and saved under `/backend/logs`. I use Loguru's built-in **rotation** and **retention** to:
-    - Create a new file every day at midnight
-    - Retain logs only for 7 days
-    - Avoid manual cleanup
+  - Create a new file every day at midnight
+  - Retain logs only for 7 days
+  - Avoid manual cleanup
+
     ```python
     logger.add(
         str(self.log_file),
@@ -62,7 +73,9 @@ IF LogConfigurator not configured:
     ```
 
 ### 2.4 Console Output with Colors
+
 - Loguru's `colorize=True` option lets me apply colors to console logs, improving readability during development.
+
     ```python
     logger.add(
         sys.stdout,
@@ -73,9 +86,11 @@ IF LogConfigurator not configured:
     ```
 
 ### 2.5 Intercepting FastAPI/Uvicorn Logs
+
 - By default, FastAPI and Uvicorn use the built-in logging module. To unify all logs under Loguru, I wrote a custom `InterceptHandler` which:
-    - Captures standard logging logs
-    - Redirects them to Loguru with correct context (function name, line number, etc.)
+  - Captures standard logging logs
+  - Redirects them to Loguru with correct context (function name, line number, etc.)
+
     ```python
     logging.basicConfig(
         handlers=[InterceptHandler()],
@@ -83,7 +98,9 @@ IF LogConfigurator not configured:
         force=True
     )
     ```
+
 - I explicitly intercept common loggers:
+
     ```python
     loggers_to_intercept = [
         "uvicorn", "uvicorn.access", "uvicorn.error",
@@ -92,6 +109,7 @@ IF LogConfigurator not configured:
     ```
 
 ### 2.6 Execution Outputs
+
 ![log file Output](/images/projects/mcttool/3-1.png)
 ![log file content Output](/images/projects/mcttool/3-2.png)
 
