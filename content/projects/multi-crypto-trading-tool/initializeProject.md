@@ -1,7 +1,13 @@
 +++
 title = "1. Project Initialization"
 type = "Projects"
-tags = ["Docker", "Docker-compose", "bash", "python", "uv", "node", "vite", "react", "PostgreSQL", "Redis", "dotenv"]
+tags = [
+  "Docker", "Docker-compose", "Dockerfile",
+  "bash", "python", "uv", "FastAPI", "RQ",
+  "node", "vite", "react",
+  "PostgreSQL", "Redis", "dotenv",
+  "project-setup", "fullstack", "monorepo"
+]
 +++
 
 In fact, I had been working on a similar project for some time. Although I tried to complete it, I eventually gave up because it was too complex and inefficient to move forward with. So I decided to restart the project from scratch.

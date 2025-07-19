@@ -1,7 +1,9 @@
 +++
 title = "5. Database Connection Management"
 type = "Projects"
-tags = ["python", "SQLAlchemy"]
+tags = [
+  "python", "SQLAlchemy", "orm", "database", "session", "architecture", "config"
+]
 +++
 
 In this section, I'll explain how I configured `SQLAlchemy` for managing database connections and sessions in a reusable and scalable way.

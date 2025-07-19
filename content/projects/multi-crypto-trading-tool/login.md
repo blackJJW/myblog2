@@ -1,7 +1,12 @@
 +++
 title = "6. Login"
 type = "Projects"
-tags = ["python", "react", "typescript", "erd", "diagram", "login"]
+tags = [
+  "python", "fastapi", "pydantic",
+  "react", "typescript", "react-router", "axios",
+  "jwt", "authentication", "security",
+  "erd", "diagram", "login", "frontend"
+]
 +++
 
 In this section, I'll explain how I made the login function. This project is designed as a single-user program. In other words, only the administrator is authorized to access and operate the system. Therefore, I created a single account with the ID: "admin".

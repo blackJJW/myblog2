@@ -1,7 +1,11 @@
 +++
 title = "4. Set Configurations"
 type = "Projects"
-tags = ["python", "BaseSettings", "dotenv", "pydantic_settings", "PostgreSQL"]
+tags = [
+  "python", "pydantic", "pydantic_settings",
+  "dotenv", "env", "BaseSettings", "settings",
+  "PostgreSQL", "database", "configuration", "backend"
+]
 +++
 
 I used a .env file to store configuration values. To load them into the application, I’m using BaseSettings from the pydantic_settings package.

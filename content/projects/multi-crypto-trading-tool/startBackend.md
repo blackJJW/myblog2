@@ -1,7 +1,10 @@
 +++
 title = "2. Setting Up the Backend"
 type = "Projects"
-tags = ["python", "uv", "FastAPI"]
+tags = [
+  "python", "uv", "FastAPI", "uvicorn",
+  "lifespan", "asyncio", "startup", "shutdown", "backend"
+]
 +++
 
 ## 1. Installing FastAPI
