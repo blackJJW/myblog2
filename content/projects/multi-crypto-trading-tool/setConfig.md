@@ -18,6 +18,8 @@ I used a .env file to store configuration values. To load them into the applicat
 
 ## 1. Settings
 
+---
+
 - `pydantic_settings.BaseSettings` is an extended version of `Pydantic`'s model designed for managing environment variables.
 - It's commonly used in Python backend frameworks like FastAPI to load and validate environment variables.
 - First, I created a `Settings` class to handle `PostgreSQL` connection configuration:

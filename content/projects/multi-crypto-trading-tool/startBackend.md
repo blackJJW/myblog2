@@ -6,6 +6,8 @@ tags = ["python", "uv", "FastAPI"]
 
 ## 1. Installing FastAPI
 
+---
+
 - We will use ***FastAPI*** as the backend server framework due to its performance and asynchronous capabilities - it's a better fit than the Flask for real-time and modular systems. Install it along with the ASGI server ***uvicorn*** using `uv`:
 
     ```bash
@@ -17,6 +19,8 @@ tags = ["python", "uv", "FastAPI"]
   - `uvicorn` : Lightweight ASGI server used to run FastAPI applications
 
 ## 2. Setting the Lifespan in FastAPI
+
+---
 
 - To manage startup and shutdown tasks (e.g., initializing connections, cleaning resources), FastAPI provides a ***lifespan*** context manager.
 

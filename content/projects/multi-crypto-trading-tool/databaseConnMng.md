@@ -8,6 +8,8 @@ In this section, I'll explain how I configured `SQLAlchemy` for managing databas
 
 ## 1. Purposes of this Management
 
+---
+
 - Use `SQLAlchemy` for ORM-based database interaction
 - Create a reusable engine and session maker
 
@@ -23,6 +25,8 @@ I chose SQLAlchemy because it is one of the most powerful and flexible ORM libra
 This flexibility makes it ideal for a project like this where maintainability and scalability are important.
 
 ## 2. Class: Database
+
+---
 
 - The `Database` class is responsible for initializing the SQLAlchemy engine, createing a session factory, and exposing a centralized declarative base for defining ORM models.
 
@@ -60,6 +64,8 @@ This flexibility makes it ideal for a project like this where maintainability an
   - `pool_pre_ping=True` : Ensures connections are alive before use (avoids DB timeout errors)
 
 ## 3. Usage Example
+
+---
 
 - To create a new session inside a service or route handler, simply do:
 

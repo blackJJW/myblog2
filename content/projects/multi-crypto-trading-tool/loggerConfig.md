@@ -21,6 +21,8 @@ For operating this project reliably, I need a robust logging system. So I decide
 
 ## 1. Pseudocode Summary
 
+---
+
 ```text
 IF LogConfigurator not configured:
     - Create log directory
@@ -32,6 +34,8 @@ IF LogConfigurator not configured:
 ```
 
 ## 2. How I Configured the Logger
+
+---
 
 - To satisfy the logging requirements mentioned above, I built a singleton `LogConfigurator` using `Loguru`, which includes:
 
