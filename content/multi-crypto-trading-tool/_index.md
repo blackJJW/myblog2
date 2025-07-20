@@ -5,9 +5,20 @@ type = "section"
 
 ### Project Overview
 
+This project is designed to aggregate real-time data from multiple cryptocurrency exchanges and execute automated trades using a variety of strategies. Performance and scalability are key priorities in its development.
+
 ---
 
-This project is designed to aggregate real-time data from multiple cryptocurrency exchanges and execute automated trades using a variety of strategies. Performance and scalability are key priorities in its development.
+### 📊 System Architecture
+
+To better illustrate the architecture of this project, the diagram below shows how different components interact within a Docker Compose environment:
+
+![System Architecture](/images/projects/mcttool/system-architecture.png)
+
+- All services communicate over a shared Docker network.
+- The **Core Layer** includes the frontend, backend, and worker services.
+- The **Infra Layer** consists of Redis (for both queuing and caching).
+- The **Monitoring Layer** captures metrics using Prometheus and displays dashboards via Grafana.
 
 ---
 
