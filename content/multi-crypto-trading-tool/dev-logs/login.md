@@ -1,6 +1,6 @@
 +++
 title = "6. Login"
-type = "Projects"
+type = "dev-log"
 tags = [
   "python", "fastapi", "pydantic",
   "react", "typescript", "react-router", "axios",

@@ -1,6 +1,6 @@
 +++
 title = "1. Project Initialization"
-type = "Projects"
+type = "dev-log"
 tags = [
   "Docker", "Docker-compose", "Dockerfile",
   "bash", "python", "uv", "FastAPI", "RQ",

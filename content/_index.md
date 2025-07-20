@@ -5,6 +5,6 @@ type = "home"
 
 ## Welcome to My Technical Blog
 
-### Engineering Logs
+### Projects
 
-- [Projects](/projects)
+- [Multi Crypto Trading Tool](/multi-crypto-trading-tool)

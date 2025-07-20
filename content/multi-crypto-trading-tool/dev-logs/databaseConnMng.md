@@ -1,6 +1,6 @@
 +++
 title = "5. Database Connection Management"
-type = "Projects"
+type = "dev-log"
 tags = [
   "python", "SQLAlchemy", "orm", "database", "session", "architecture", "config"
 ]

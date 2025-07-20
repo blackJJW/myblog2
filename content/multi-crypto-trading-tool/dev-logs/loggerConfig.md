@@ -1,6 +1,6 @@
 +++
 title = "3. Logger Configuration"
-type = "Projects"
+type = "dev-log"
 tags = [
   "python", "uv", "loguru", "logger", "logging",
   "FastAPI", "Uvicorn", "singleton", "log-rotation", "backend"

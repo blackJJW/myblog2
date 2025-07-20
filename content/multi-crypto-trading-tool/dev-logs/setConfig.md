@@ -1,6 +1,6 @@
 +++
 title = "4. Set Configurations"
-type = "Projects"
+type = "dev-log"
 tags = [
   "python", "pydantic", "pydantic_settings",
   "dotenv", "env", "BaseSettings", "settings",

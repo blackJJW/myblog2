@@ -1,6 +1,6 @@
 +++
 title = "2. Setting Up the Backend"
-type = "Projects"
+type = "dev-log"
 tags = [
   "python", "uv", "FastAPI", "uvicorn",
   "lifespan", "asyncio", "startup", "shutdown", "backend"
