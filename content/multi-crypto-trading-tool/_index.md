@@ -33,3 +33,4 @@ To better illustrate the architecture of this project, the diagram below shows h
 - [7. Topbar Menu](/multi-crypto-trading-tool/dev-logs/topBarMenu/)
 - [8. Login Log](/multi-crypto-trading-tool/dev-logs/loginlog/)
 - [9. Refactoring 1: Separate AuthService and Move Login API](/multi-crypto-trading-tool/dev-logs/refactor1/)
+- [10. Managing API Keys - Backend Implementation](/multi-crypto-trading-tool/dev-logs/mngapikeys1/)
