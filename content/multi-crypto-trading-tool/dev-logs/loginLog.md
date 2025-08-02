@@ -2,18 +2,11 @@
 title = "8. Login Log"
 type = "dev-log"
 tags = [
-  "FastAPI",
-  "SQLAlchemy",
-  "Login Log",
-  "User Authentication",
-  "Security",
-  "Backend",
-  "Python",
-  "Database Logging",
-  "PostgreSQL",
-  "Enum",
-  "System Design",
+  "fastapi", "sqlalchemy", "backend", "user-authentication",
+  "login-log", "security", "postgresql", "enum", "erd",
+  "database-logging", "system-design", "python"
 ]
+weight = 8
 +++
 
 In this section, I'll explain how I implemented the login log functionality. Since this is a single-user application, logging each login  might seem unnecessary at first. However, I decided to build this feature to enhance security and maintain visibility over all login activities. Recording login attempts allows me to track unauthorized access or unexpected behavior in the system.

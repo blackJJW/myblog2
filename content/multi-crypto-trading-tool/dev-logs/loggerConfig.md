@@ -2,9 +2,11 @@
 title = "3. Logger Configuration"
 type = "dev-log"
 tags = [
-  "python", "uv", "loguru", "logger", "logging",
-  "FastAPI", "Uvicorn", "singleton", "log-rotation", "backend"
+  "python", "fastapi", "loguru", "uvicorn", "asgi",
+  "logging", "logging-configuration", "singleton-pattern",
+  "log-rotation", "intercept-logger", "backend-utils"
 ]
+weight = 3
 +++
 
 For operating this project reliably, I need a robust logging system. So I decided the `Loguru` library for its simplicity and powerful features. The configuration was customized to meet the following requirements:

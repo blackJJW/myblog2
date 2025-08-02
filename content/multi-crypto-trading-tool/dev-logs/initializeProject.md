@@ -2,12 +2,11 @@
 title = "1. Project Initialization"
 type = "dev-log"
 tags = [
-  "Docker", "Docker-compose", "Dockerfile",
-  "bash", "python", "uv", "FastAPI", "RQ",
-  "node", "vite", "react",
-  "PostgreSQL", "Redis", "dotenv",
-  "project-setup", "fullstack", "monorepo"
+  "project-initialization", "system-design", "docker", "docker-compose", "dockerfile",
+  "fastapi", "redis", "rq", "postgresql", "uv", "dotenv",
+  "bash", "python", "node", "vite", "react", "monorepo", "fullstack"
 ]
+weight = 1
 +++
 
 In fact, I had been working on a similar project for some time. Although I tried to complete it, I eventually gave up because it was too complex and inefficient to move forward with. So I decided to restart the project from scratch.

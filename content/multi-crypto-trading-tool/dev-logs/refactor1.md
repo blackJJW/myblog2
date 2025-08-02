@@ -2,8 +2,11 @@
 title = "9. Refactoring 1: Separate AuthService and Move Login API"
 type = "dev-log"
 tags = [
-  "refactoring", "fastapi", "auth-service", "user-service", "jwt", "user-management", "token-authentication", "api-design", "clean-architecture"
+  "refactoring", "fastapi", "sqlalchemy", "auth-service",
+  "user-service", "jwt", "token-authentication", "user-authentication",
+  "clean-architecture", "api-design", "exception-handling", "backend"
 ]
+weight = 9
 +++
 
 This refactoring was performed to improve **separation of concerns** and make authentication logic more **modular and testable**.

@@ -2,10 +2,11 @@
 title = "7. Topbar Menu"
 type = "dev-log"
 tags = [
-  "react", "react-bootstrap", "tsx",
-  "frontend", "ui", "navigation", "layout", "auth", "component",
-  "access_control"
+  "react", "react-bootstrap", "tsx", "component", 
+  "navigation", "layout", "access-control", "auth", 
+  "conditional-rendering", "frontend", "ui"
 ]
+weight = 7
 +++
 
 In this section, I'll explain how I implemented the topbar menu. I implemented this menu to test and operate various functions between backend and the worker services.

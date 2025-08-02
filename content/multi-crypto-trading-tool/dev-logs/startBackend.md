@@ -2,9 +2,10 @@
 title = "2. Setting Up the Backend"
 type = "dev-log"
 tags = [
-  "python", "uv", "FastAPI", "uvicorn",
-  "lifespan", "asyncio", "startup", "shutdown", "backend"
+  "project-initialization", "fastapi", "uvicorn", "lifespan", "asgi", "startup-shutdown",
+  "python-backend", "asyncio", "pydantic"
 ]
+weight = 2
 +++
 
 ## 1. Installing FastAPI

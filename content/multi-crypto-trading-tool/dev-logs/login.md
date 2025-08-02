@@ -2,11 +2,12 @@
 title = "6. Login"
 type = "dev-log"
 tags = [
-  "python", "fastapi", "pydantic",
-  "react", "typescript", "react-router", "axios",
-  "jwt", "authentication", "security",
-  "erd", "diagram", "login", "frontend"
+  "fastapi", "jwt", "authentication", "security", 
+  "pydantic", "sqlalchemy", "react", "typescript", 
+  "react-router", "axios", "frontend", "erd", "diagram", 
+  "system-design", "login-flow"
 ]
+weight = 6
 +++
 
 In this section, I'll explain how I made the login function. This project is designed as a single-user program. In other words, only the administrator is authorized to access and operate the system. Therefore, I created a single account with the ID: "admin".

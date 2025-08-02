@@ -2,8 +2,9 @@
 title = "5. Database Connection Management"
 type = "dev-log"
 tags = [
-  "python", "SQLAlchemy", "orm", "database", "session", "architecture", "config"
+  "fastapi", "sqlalchemy", "database", "session", "orm", "configuration", "system-design"
 ]
+weight = 5
 +++
 
 In this section, I'll explain how I configured `SQLAlchemy` for managing database connections and sessions in a reusable and scalable way.

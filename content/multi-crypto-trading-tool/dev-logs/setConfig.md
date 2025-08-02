@@ -2,10 +2,9 @@
 title = "4. Set Configurations"
 type = "dev-log"
 tags = [
-  "python", "pydantic", "pydantic_settings",
-  "dotenv", "env", "BaseSettings", "settings",
-  "PostgreSQL", "database", "configuration", "backend"
+  "fastapi", "settings", "pydantic", "configuration", "postgresql", "backend", "db-config"
 ]
+weight = 4
 +++
 
 I used a .env file to store configuration values. To load them into the application, I’m using BaseSettings from the pydantic_settings package.
