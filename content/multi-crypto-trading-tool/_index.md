@@ -32,5 +32,7 @@ To better illustrate the architecture of this project, the diagram below shows h
 - [6. Login Page Setup](/multi-crypto-trading-tool/dev-logs/login/)
 - [7. Topbar Menu](/multi-crypto-trading-tool/dev-logs/topBarMenu/)
 - [8. Login Log](/multi-crypto-trading-tool/dev-logs/loginlog/)
-- [9. Refactoring 1: Separate AuthService and Move Login API](/multi-crypto-trading-tool/dev-logs/refactor1/)
+- [9. Refactoring 1: Backend - Separate AuthService and Move Login API](/multi-crypto-trading-tool/dev-logs/refactor1/)
 - [10. Managing API Keys - Backend Implementation](/multi-crypto-trading-tool/dev-logs/mngapikeys1/)
+- [11. Managing API Keys - Frontend Implementation](/multi-crypto-trading-tool/dev-logs/mngapikeys2/)
+- [12. Refactoring 2: Backend - Applying Async Database Management](/multi-crypto-trading-tool/dev-logs/refactor2/)
