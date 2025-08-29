@@ -1,5 +1,5 @@
 +++
-title = "9. Refactoring 1: Separate AuthService and Move Login API"
+title = "9. Refactoring 1: Backend - Separate AuthService and Move Login API"
 type = "dev-log"
 tags = [
   "refactoring", "fastapi", "sqlalchemy", "auth-service",
