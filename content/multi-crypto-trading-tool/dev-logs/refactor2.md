@@ -58,7 +58,7 @@ Previously, database access was implemented synchronously across services and en
     class AsyncDatabase:
         """Async database connection and session management."""
         
-        Base = declarative_base()
+        Base = Base
         
         def __init__(self):
             self._engine = create_async_engine(
