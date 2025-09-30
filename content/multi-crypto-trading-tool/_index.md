@@ -1,6 +1,7 @@
 +++
 title = "Multi Crypto Trading Tool"
 type = "section"
+weight = 1
 +++
 
 ### Project Overview
