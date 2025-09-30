@@ -11,7 +11,7 @@ Single-Layer Perceptron (SLP) is one of the simplest neural network architecture
 
 To produce an output vector, the SLP uses one perceptron for each scalar element in the output.
 
-  ![slp](/images/learnig_notes/ml/1-1.png)
+  ![slp](/images/learning_notes/ml/1-1.png)
 
 - In this image, $P_{1},\ P_{2},\ P_{3}$ are perceptrons that produce an output vector of size 3.
 - There are no interactions between these perceptrons, since they are not connected to each other.
