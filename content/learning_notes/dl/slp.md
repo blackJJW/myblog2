@@ -2,7 +2,11 @@
 title = "1. Single-Layer Perceptron"
 type = "learning-notes"
 tags = [
-  
+  "deep-learning",
+  "machine-learning",
+  "neural-networks",
+  "perceptron",
+  "learning-notes"
 ]
 weight = 1
 +++
