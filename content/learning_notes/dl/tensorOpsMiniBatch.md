@@ -6,6 +6,8 @@ tags = [
   "machine-learning",
   "neural-networks",
   "perceptron",
+  "tensor",
+  "minibatch",
   "learning-notes"
 ]
 weight = 2
