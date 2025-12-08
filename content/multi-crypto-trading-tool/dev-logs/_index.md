@@ -18,3 +18,4 @@ This section contains various development logs:
 - [11. Managing API Keys - Frontend Implementation](/multi-crypto-trading-tool/dev-logs/mngapikeys2/)
 - [12. Refactoring 2: Backend - Applying Async Database Management](/multi-crypto-trading-tool/dev-logs/refactor2/)
 - [13. Login Log - Frontend](/multi-crypto-trading-tool/dev-logs/frontendloginlog/)
+- [14. Makefile Setup](/multi-crypto-trading-tool/dev-logs/makefilesetup/)
