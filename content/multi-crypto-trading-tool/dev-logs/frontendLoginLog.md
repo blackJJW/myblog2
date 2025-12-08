@@ -12,6 +12,8 @@ This article follows [[8. Login Log](/multi-crypto-trading-tool/dev-logs/loginlo
 
 ## 1. Login Log Menu Structure
 
+---
+
 - To visualize the layout, I created a simple diagram of the login log menu.
     ![login log layout](/images/projects/mcttool/13-1.png)
 
