@@ -9,16 +9,16 @@ tags = [
 weight = 16
 +++
 
-Retries are inevitable in a multi-serivce system. HTTP timeouts, worker restarts, and upstream retries can cause the same trade request to arrive more than once. Without idempotency, I risk double-writing trades and corrupting downstream analytics.
+Retries are inevitable in a multi-service system. HTTP timeouts, worker restarts, and upstream retries can cause the same trade request to arrive more than once. Without idempotency, I risk double-writing trades and corrupting downstream analytics.
 
-## 1. Where idemptency lives in the backend
+## 1. Where idempotency lives in the backend
 
 ---
 
-This is pseudo code sample of my currenct project.
+Below is simplified pseudocode that reflects my current flow:
 
 ```python
-# router: /internal-api/conione-worker/public/trades
+# router: /internal-api/coinone-worker/public/trades
 @router.get("/trades")
 async def fetch_trades(quote, target, db, http_client):
     payload = await fetch_go_worker_trades(http_client, quote, target)
@@ -46,10 +46,16 @@ async def ingest_payload(exchange_name, quote_currency, target_currency, payload
         "attempted": len(rows),
         "skipped": len(rows) - inserted,
     }
+```
 
--- db: unique constraint ensures replay safety
+At the database level, a unique constraint provides replay safety.
+
+```sql
 INSERT INTO tb_trades (...) VALUES (...)
 ON CONFLICT (exchange_id, currency_pair_no, trade_id) DO NOTHING;
 ```
 
-On above case, the router explicitly calls the service with `on_conflict="nothing"` so duplicate
+This makes the endpoint effectively idempotent at the data layer: the same `trade_id` for the same exchange/pair will be inserted at most once.
+
+In this setup, the router explicitly calls the service with `on_conflict="nothing"`, so duplicate trades are safely ignored.
+
