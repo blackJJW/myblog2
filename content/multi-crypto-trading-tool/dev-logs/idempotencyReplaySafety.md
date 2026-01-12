@@ -59,3 +59,24 @@ This makes the endpoint effectively idempotent at the data layer: the same `trad
 
 In this setup, the router explicitly calls the service with `on_conflict="nothing"`, so duplicate trades are safely ignored.
 
+## 2. Data-layer idempotency with a unique trade key
+
+---
+
+The `tb_trades` table enforces a unique constraints on a natural key:
+
+- `exchange_id`
+- `currency_pair_no`
+- `trade_id`
+
+This guarantees that the same trade cannot be inserted twice.
+
+Conceptually:
+
+```sql
+UNIQUE (exchange_id, currency_pair_no, trade_id)
+```
+
+When the service ingests trades, it uses a PostgreSQL upsert with `ON CONFLICT DO NOTHING`. This makes replays safe without adding extra duplicate checks in the application layer.
+
+This approach works well as long as `trade_id` is stable and unique per exchange/pair. If an exchange reuses IDs or changes semantics, the idempotency key should be adjusted (e.g., include timestamp or use a canonical hash).
