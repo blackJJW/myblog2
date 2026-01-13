@@ -80,3 +80,45 @@ UNIQUE (exchange_id, currency_pair_no, trade_id)
 When the service ingests trades, it uses a PostgreSQL upsert with `ON CONFLICT DO NOTHING`. This makes replays safe without adding extra duplicate checks in the application layer.
 
 This approach works well as long as `trade_id` is stable and unique per exchange/pair. If an exchange reuses IDs or changes semantics, the idempotency key should be adjusted (e.g., include timestamp or use a canonical hash).
+
+## 3. Service-level replay handling
+
+---
+
+`TradesService` normalizes and validates each payload, then inserts trades in batches. If the payload is replayed:
+  
+- Duplicates are skipped by the unique constraint.
+- The response reports how many rows were inserted vs. skipped.
+
+```python
+async def ingest_payload(..., on_conflict="nothing"):
+    rows = normalize(payload)            # parse, validate, map to insert rows
+    if not rows:
+        return {"inserted": 0, "attempted": 0, "skipped": 0}
+
+    inserted = bulk_upsert(rows, on_conflict="nothing")  # ON CONFLICT DO NOTHING
+    return {
+        "inserted": inserted,
+        "attempted": len(rows),
+        "skipped": len(rows) - inserted,  # duplicates skipped on replay
+    }
+
+```
+
+This produces a clean, deterministic response even under retries, because the insert is idempotent, repeated requests return consistent counts without creating duplicate rows.
+
+
+
+
+
+  ### 4. Orderbook snapshots use the same pattern
+
+  Orderbook ingestion follows the same design:
+
+  - snapshot uniqueness is based on (exchange_id, currency_pair_no, server_time_ms, sequence_id)
+  - ON CONFLICT DO NOTHING prevents duplicates
+  - levels are inserted by (snapshot_id, side, level_index)
+
+  Even if the same orderbook payload is replayed, the database remains consistent.
+
+  ### 5. Why this works well for replay safety
