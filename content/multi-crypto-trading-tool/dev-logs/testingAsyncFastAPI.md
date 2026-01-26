@@ -21,17 +21,13 @@ asyncio_mode = auto
 
 This enables async tests without extra boilerplate. You can use `@pytest.mark.asyncio` when needed, and async fixtures(e.g., `async_db_session`) run naturally.
 
-
-
-
-
 ## 2. Async DB fixture (real schema, isolated session)
 
-For integration-level service tests, I use a real async SQLAlchemy session with a temporary schema setup. The fixture in backend/
-src/tests/conftest.py:
+---
 
-- backend/src/tests/conftest.py
+For integration-level service tests, I use a real async SQLAlchemy session and create the schema before running test. The fixture lives in `backend/src/test/confest.py`:
 
+```python
 @pytest.fixture
 async def async_db_session() -> AsyncGenerator[AsyncSession, None]:
     engine = create_async_engine(settings.async_db_url, echo=False, future=True)
@@ -45,8 +41,14 @@ async def async_db_session() -> AsyncGenerator[AsyncSession, None]:
         await session.rollback()
 
     await engine.dispose()
+```
 
 This gives each test a clean async session while keeping the tests fast.
+
+If a test commits data, I either run in inside an explicit transaction per test or reset the schema between tests.
+
+
+
 
 ## 3. Mocking service dependencies for unit‑style tests
 
