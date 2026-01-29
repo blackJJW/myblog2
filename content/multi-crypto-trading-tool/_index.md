@@ -41,3 +41,4 @@ To better illustrate the architecture of this project, the diagram below shows h
 - [14. Makefile Setup](/multi-crypto-trading-tool/dev-logs/makefilesetup/)
 - [15. FastAPI Service Architecture: Thin Routers, Service Layer, and DTO Patterns](/multi-crypto-trading-tool/dev-logs/fastapservicearch/)
 - [16. Idempotency and Replay Safety for Trade Execution Endpoints](/multi-crypto-trading-tool/dev-logs/idempotencyReplaySafety/)
+- [17. Testing Async Services in FastAPI: pytest‑asyncio Fixtures and Mocks](/multi-crypto-trading-tool/dev-logs/testingAsyncFastAPI/)
