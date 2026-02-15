@@ -47,3 +47,4 @@ To better illustrate the architecture of this project, the diagram below shows h
 - [20. Designing resilient exchange adapters (rate limits, errors, retries)](/multi-crypto-trading-tool/dev-logs/designingRestclientExchangeAdapters/)
 - [21. WebSockets vs polling for live price updates in crypto apps)](/multi-crypto-trading-tool/dev-logs/websocketsVsPolling/)
 - [22. Redis + Postgres patterns for market data caching and persistence)](/multi-crypto-trading-tool/dev-logs/redisPostgresPatterns/)
+- [23. Async trading workflows: handling long‑running tasks and retries](/multi-crypto-trading-tool/dev-logs/asyncTradingWorkflows/)
