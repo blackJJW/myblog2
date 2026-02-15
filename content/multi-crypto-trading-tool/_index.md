@@ -43,3 +43,4 @@ To better illustrate the architecture of this project, the diagram below shows h
 - [16. Idempotency and Replay Safety for Trade Execution Endpoints](/multi-crypto-trading-tool/dev-logs/idempotencyReplaySafety/)
 - [17. Testing Async Services in FastAPI: pytest‑asyncio Fixtures and Mocks](/multi-crypto-trading-tool/dev-logs/testingAsyncFastAPI/)
 - [18. Securing API keys and secrets with Pydantic settings + .env](/multi-crypto-trading-tool/dev-logs/securingApiKeyAndSecrets/)
+- [19. Observability for trading systems: logging, metrics, and tracing basics](/multi-crypto-trading-tool/dev-logs/observabilityForTradingSystems/)
