@@ -1,5 +1,5 @@
 +++
-title = "Securing API keys and secrets with Pydantic settings + .env"
+title = "18. Securing API keys and secrets with Pydantic settings + .env"
 type = "dev-log"
 tags = ["fastapi", "pydantic", "settings", "dotenv", "security", "jwt", "encryption"]
 weight = 18
